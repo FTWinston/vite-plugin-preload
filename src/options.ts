@@ -13,10 +13,15 @@ export interface PreloadOptions {
    * @default true
    */
   format?: boolean | Omit<PrettierOptions, "parser">;
+  /**
+   * @default modulepreload
+   */
+  rel?: 'modulepreload' | 'prefetch';
 }
 
 export const defaultOptions: PreloadOptions = {
   includeJs: true,
   includeCss: true,
   format: true,
+  rel: 'modulepreload',
 };
